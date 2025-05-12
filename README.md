@@ -1,6 +1,6 @@
 # WebDev
-Meu grupo resolveu 3 exercícios propostos, utilizando JavaScript e Html como linguagem base. 
-Os exercícios consistem em:
+### Meu grupo resolveu 3 exercícios propostos, utilizando JavaScript e Html como linguagem base. 
+##
 ## Exercício 1: Contador de Tempo de Sessão com Feedback (Ênfase em SessionStorage e Lógica de Tempo)
 
 Enunciado: Crie uma página web que comece a contar o tempo assim que o usuário a abre. Exiba o tempo decorrido (em segundos) na página. Se o tempo de sessão ultrapassar 10 segundos, exiba uma mensagem sutil incentivando o usuário a interagir ou indicando que a sessão pode expirar em breve. O tempo decorrido deve ser armazenado no SessionStorage para que, se o usuário recarregar a página dentro da mesma sessão, o contador continue de onde parou.
