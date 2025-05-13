@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contador de Sessão</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+    }
+    #mensagem {
+      margin-top: 1rem;
+      color: #777;
+      font-style: italic;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Tempo de Sessão</h1>
+  <p>Tempo decorrido: <span id="contador">0</span> segundos</p>
+  <p id="mensagem">Você está aí? Que tal interagir? A sessão pode expirar em breve...</p>
+
+  <script>
+    const contadorEl = document.getElementById("contador");
+    const mensagemEl = document.getElementById("mensagem");
+
+    let tempoDecorrido = parseInt(sessionStorage.getItem("tempoDecorrido")) || 0;
+    contadorEl.textContent = tempoDecorrido;
+
+    function atualizarContador() {
+      tempoDecorrido++;
+      contadorEl.textContent = tempoDecorrido;
+      sessionStorage.setItem("tempoDecorrido", tempoDecorrido);
+
+      if (tempoDecorrido > 10) {
+        mensagemEl.style.display = "block";
+      }
+    }
+
+    setInterval(atualizarContador, 1000);
+  </script>
+</body>
+</html>
