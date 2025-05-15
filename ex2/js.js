@@ -32,7 +32,7 @@
           sequencia.push(sequencia[sequencia.length - 1] * ratio1);
         }
       } else {
-        padrao = "Padrão Personalizado";
+        padrao = "Padrão Personalizado(Fibonacci)";
         for (let i = 0; i < 5; i++) {
           const len = sequencia.length;
           sequencia.push(sequencia[len - 1] + sequencia[len - 2]);
